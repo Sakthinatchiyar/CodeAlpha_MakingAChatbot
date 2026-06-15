@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "658a12345678",
+    "roomNumber": "101",
+    "capacity": 3,
+    "occupiedSeats": 2,
+    "status": "Available"
+  },
+  {
+    "_id": "658a98765432",
+    "roomNumber": "102",
+    "capacity": 2,
+    "occupiedSeats": 2,
+    "status": "Full"
+  }
+]

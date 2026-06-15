@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CodeAlpha Chatbot</title>
+</head>
+
+<body>
+
+<h1>AI Chatbot</h1>
+
+<input type="text" id="userInput">
+
+<button onclick="sendMessage()">Send</button>
+
+<p id="reply"></p>
+
+<script>
+
+function sendMessage(){
+
+let msg=document.getElementById("userInput").value;
+
+fetch("/get",{
+
+method:"POST",
+
+headers:{
+"Content-Type":
+"application/x-www-form-urlencoded"
+},
+
+body:"msg="+msg
+
+})
+
+.then(response=>response.json())
+
+.then(data=>{
+
+document.getElementById("reply").innerHTML=data;
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
